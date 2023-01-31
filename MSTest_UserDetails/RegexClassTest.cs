@@ -73,7 +73,7 @@ namespace MSTest_UserDetails
         }
         public string Password(string data)
         {
-            string pattern = "^[A-z]{8,}$";
+            string pattern = "^((?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%&])).{8,}$";
             Regex regex = new Regex(pattern);
             if (regex.IsMatch(data))
             {

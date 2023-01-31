@@ -44,7 +44,7 @@ namespace TestingRegex
         {
             RegexClassTest objt = new RegexClassTest();
             string output = "validPassword";
-            string actualResult = objt.Password("Sunilyay");
+            string actualResult = objt.Password("Sunil99@");
             Assert.AreEqual(output, actualResult);
         }
     }    
