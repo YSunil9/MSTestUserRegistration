@@ -24,5 +24,20 @@ namespace MSTest_UserDetails
                 return "invalidName";
             }
         }
+        public string LastName(string data)
+        {
+            string pattern = "^[A-Z]{1}[a-z]{2,}";
+            Regex regex = new Regex(pattern);
+            if (regex.IsMatch(data))
+            {
+                Console.WriteLine(data + " is a Valid First Name");
+                return "validName";
+            }
+            else
+            {
+                Console.WriteLine(data + " is a Invalid First Name");
+                return "invalidName";
+            }
+        }
     }
 }

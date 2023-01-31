@@ -4,10 +4,23 @@
     {
         public static void Main(string[] args)
         {
+            Console.WriteLine("welcome To Regex User Registration Problem");
             RegexClassTest obj = new RegexClassTest();
-            Console.WriteLine("Enter First Name");
-            string firstName = Console.ReadLine();
-            obj.FirstName(firstName);
+            Console.WriteLine("1.First Name\n2.Last Name\n");
+            int select = Convert.ToInt32(Console.ReadLine());
+            switch (select)
+            {
+                case 1:
+                    Console.WriteLine("Enter First Name");
+                    string firstName = Console.ReadLine();
+                    obj.FirstName(firstName);
+                    break;
+                case 2:
+                    Console.WriteLine("Enter Last Name");
+                    string LastName = Console.ReadLine();
+                    obj.LastName(LastName);
+                    break;
+            }
         }
     }
 }

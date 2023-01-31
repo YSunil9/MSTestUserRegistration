@@ -15,5 +15,13 @@ namespace TestingRegex
             string actualResult = objt.FirstName("Sunil");            
             Assert.AreEqual(output, actualResult);
         }
+        [TestMethod]
+        public void TestLastName()
+        {
+            RegexClassTest objt = new RegexClassTest();
+            string output = "validName";
+            string actualResult = objt.LastName("Kumar");
+            Assert.AreEqual(output, actualResult);
+        }
     }    
 }
