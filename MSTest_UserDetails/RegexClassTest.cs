@@ -7,17 +7,22 @@ using System.Threading.Tasks;
 
 namespace MSTest_UserDetails
 {
-    internal class RegexClassTest
+    public class RegexClassTest
     {
-        public void FirstName(string name)
+        public string FirstName(string data)
         {
-            const string NAME = "^[A-Z]{1}[a-z]{2}$";
-            if (Regex.IsMatch(name, NAME))
-            {
-                Console.WriteLine(name + " is a valid Name");
-                return;
+            string pattern = "^[A-Z]{1}[a-z]{2,}";
+            Regex regex = new Regex(pattern);
+            if (regex.IsMatch(data))
+            {               
+                Console.WriteLine(data + " is a Valid First Name");              
+                return "validName";
             }
-            Console.WriteLine(name + " is a invalid Name");
+            else
+            {               
+                Console.WriteLine(data + " is a Invalid First Name");
+                return "invalidName";
+            }
         }
     }
 }

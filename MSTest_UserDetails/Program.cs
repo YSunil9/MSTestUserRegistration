@@ -2,7 +2,7 @@
 {
     internal class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             RegexClassTest obj = new RegexClassTest();
             Console.WriteLine("Enter First Name");
