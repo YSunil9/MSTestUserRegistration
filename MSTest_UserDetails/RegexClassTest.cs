@@ -86,5 +86,20 @@ namespace MSTest_UserDetails
                 return "invalidPassword";
             }
         }
+        public string EmailSample(string id)
+        {
+            string emailFormat = "[A-Za-z0-9](.[-+a-z0-9A-Z])+@[A-Za-z0-9]+.[a-z]{2,4}(.[a-z]{2,3})?$";
+            Regex regex1 = new Regex(emailFormat);
+            if (regex1.IsMatch(id))
+            {
+                Console.Write(id + " is Valid \n");
+                return "validEmailSample";
+            }
+            else
+            {
+                Console.Write("Email Is Invalid!\nPlease Enter Email ID in Proper Format \n");
+                return "invalidEmailSample";
+            }
+        }
     }
 }

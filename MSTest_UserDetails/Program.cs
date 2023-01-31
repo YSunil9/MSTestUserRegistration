@@ -6,7 +6,7 @@
         {
             Console.WriteLine("welcome To Regex User Registration Problem");
             RegexClassTest obj = new RegexClassTest();
-            Console.WriteLine("1.First Name\n2.Last Name\n3.Email\n4.Mobile\n5.Password\n");
+            Console.WriteLine("1.First Name\n2.Last Name\n3.Email\n4.Mobile\n5.Password\n6.Email Sample");
             int select = Convert.ToInt32(Console.ReadLine());
             switch (select)
             {
@@ -34,6 +34,11 @@
                     Console.WriteLine("Enter Password");
                     string pswd = Console.ReadLine();
                     obj.Password(pswd);
+                    break;
+                case 6:
+                    Console.WriteLine("Enter Email Id");
+                    string email = Console.ReadLine();
+                    obj.EmailSample(email);
                     break;
             }
         }

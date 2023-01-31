@@ -47,5 +47,13 @@ namespace TestingRegex
             string actualResult = objt.Password("Sunil99@");
             Assert.AreEqual(output, actualResult);
         }
+        [TestMethod]
+        public void TestEmailSample()
+        {
+            RegexClassTest objt = new RegexClassTest();
+            string output = "validEmailSample";
+            string actualResult = objt.EmailSample("Sunil.pcs24@gmail.com");
+            Assert.AreEqual(output, actualResult);
+        }
     }    
 }
