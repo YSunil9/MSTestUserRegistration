@@ -23,5 +23,13 @@ namespace TestingRegex
             string actualResult = objt.LastName("Kumar");
             Assert.AreEqual(output, actualResult);
         }
+        [TestMethod]
+        public void TestEmail()
+        {
+            RegexClassTest objt = new RegexClassTest();
+            string output = "validEmail";
+            string actualResult = objt.Email("sunil.pcs24@gmail.com");
+            Assert.AreEqual(output, actualResult);
+        }
     }    
 }

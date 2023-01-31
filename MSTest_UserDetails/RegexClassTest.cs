@@ -30,13 +30,29 @@ namespace MSTest_UserDetails
             Regex regex = new Regex(pattern);
             if (regex.IsMatch(data))
             {
-                Console.WriteLine(data + " is a Valid First Name");
+                Console.WriteLine(data + " is a Valid Last Name");
                 return "validName";
             }
             else
             {
-                Console.WriteLine(data + " is a Invalid First Name");
+                Console.WriteLine(data + " is a Invalid Last Name");
                 return "invalidName";
+            }
+        }
+        public string Email(string data)
+        {
+
+            string pattern = "^[a-zA-z0-9]+[.]{0,1}[a-zA-z0-9]+([@]?)+[a-z]{1,15}[.]+(com|co)+((.in)*)$";
+            Regex regex = new Regex(pattern);
+            if (regex.IsMatch(data))
+            {
+                Console.WriteLine(data + " is a Valid Email ID");
+                return "validEmail";
+            }
+            else
+            {
+                Console.WriteLine(data + " is a Invalid Email ID");
+                return "invalidEmail";
             }
         }
     }
