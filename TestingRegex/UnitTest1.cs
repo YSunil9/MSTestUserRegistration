@@ -39,5 +39,13 @@ namespace TestingRegex
             string actualResult = objt.Mobile("8709383334");
             Assert.AreEqual(output, actualResult);
         }
+        [TestMethod]
+        public void TestPassword()
+        {
+            RegexClassTest objt = new RegexClassTest();
+            string output = "validPassword";
+            string actualResult = objt.Password("Sunilyay");
+            Assert.AreEqual(output, actualResult);
+        }
     }    
 }
