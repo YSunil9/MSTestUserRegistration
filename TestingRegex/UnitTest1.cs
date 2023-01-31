@@ -31,5 +31,13 @@ namespace TestingRegex
             string actualResult = objt.Email("sunil.pcs24@gmail.com");
             Assert.AreEqual(output, actualResult);
         }
+        [TestMethod]
+        public void TestMobile()
+        {
+            RegexClassTest objt = new RegexClassTest();
+            string output = "validMob";
+            string actualResult = objt.Mobile("8709383334");
+            Assert.AreEqual(output, actualResult);
+        }
     }    
 }

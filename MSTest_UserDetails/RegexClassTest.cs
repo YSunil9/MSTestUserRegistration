@@ -55,5 +55,21 @@ namespace MSTest_UserDetails
                 return "invalidEmail";
             }
         }
+
+        public string Mobile(string data)
+        {
+            string pattern = "^[6-9]{2}[0-9]{8}?$";
+            Regex regex = new Regex(pattern);
+            if (regex.IsMatch(data))
+            {
+                Console.WriteLine(data + " is a Valid Phone Number");
+                return "validMob";
+            }
+            else
+            {
+                Console.WriteLine(data + " is a Invalid Phone Number");
+                return "invalidMob";
+            }
+        }
     }
 }
